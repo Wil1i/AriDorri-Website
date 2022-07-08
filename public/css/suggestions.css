@@ -1,15 +1,25 @@
 .suggest{
     float: left;
     background-color: white;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.01);
     padding: 10px;
     border-radius: 10px;
+    width: 350px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.suggest:first-child{
+.suggest > p:first-child{
     font-size: 20px;
 }
 
-.suggest:last-child{
-    color: rgb(67, 67, 67);
+.suggest > p:last-child{
+    background-color: rgb(226, 226, 226);
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(96, 96, 96);
+    word-break: break-all;
+    overflow: scroll;
+    height: 55px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 }
