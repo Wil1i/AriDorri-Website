@@ -1,0 +1,20 @@
+{
+    "app" : {
+        "secret" : "SECRET",
+        "port" : 80
+    },
+
+    "errors" : {
+        "403" : {
+            "code" : 403,
+            "msg" : "You dont have permission for access to this page."
+        }
+    },
+
+    "socials" : {
+        "instagram" : "https://www.instagram.com/aridorri_st",
+        "telegram" : "",
+        "youtube" : "",
+        "discord" : ""
+    }
+}
