@@ -16,5 +16,11 @@
         "telegram" : "",
         "youtube" : "",
         "discord" : ""
+    },
+
+    "db" : {
+        "name" : "aridorri",
+        "username" : "root",
+        "password" : "root"
     }
 }
