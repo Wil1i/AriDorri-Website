@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/suggestions.css">
     <title>AriDorri</title>
 </head>
 <body>
-    <ul>
+    <ul id="suggestions-ul">
 
         <% suggestions.forEach(suggest => { %>
 
-            <li>
+            <li class="suggest">
                 <p><%= suggest.name %></p>
                 <p><%= suggest.text %></p>
             </li>
