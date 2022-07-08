@@ -22,13 +22,3 @@
     font-size: 13px;
     transition: font-size 0.2s ease-in-out, height 0.2s ease-in-out;
 }
-
-.suggest > p:last-child:hover{
-    font-size: 20px;
-    height: 165px;
-}
-
-.suggest:hover{
-    width: 450px;
-    height: 200px;
-}
