@@ -9,10 +9,6 @@
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.suggest > p:first-child{
-    font-size: 20px;
-}
-
 .suggest > p:last-child{
     background-color: rgb(226, 226, 226);
     padding: 5px;
