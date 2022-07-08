@@ -7,6 +7,7 @@
     height: 100px;
     margin: 10px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 .suggest > p:last-child{
@@ -16,7 +17,18 @@
     color: rgb(96, 96, 96);
     word-break: break-all;
     overflow: scroll;
-    height: 55px;
+    height: 65px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
     font-size: 13px;
+    transition: font-size 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.suggest > p:last-child:hover{
+    font-size: 20px;
+    height: 165px;
+}
+
+.suggest:hover{
+    width: 450px;
+    height: 200px;
 }
