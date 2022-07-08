@@ -34,7 +34,7 @@ Router.get("/dis", (req, res) => {
     res.redirect(config.socials.discord)
 })
 
-Router.get("/donate/paypal", (req, res) => {
+Router.get("/donate/tip", (req, res) => {
     res.redirect(config.socials.paypal)
 })
 
