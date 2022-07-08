@@ -42,5 +42,8 @@ Router.get("/donate", (req, res) => {
     res.redirect(config.socials.reymit)
 })
 
+Router.get("/guilded", (req, res) => {
+    res.redirect(config.socials.guilded)
+})
 
 module.exports = Router;
