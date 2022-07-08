@@ -34,4 +34,8 @@ Router.get("/dis", (req, res) => {
     res.redirect(config.socials.discord)
 })
 
+Router.get("/donate", (req, res) => {
+    res.redirect(config.socials.reymit)
+})
+
 module.exports = Router;
