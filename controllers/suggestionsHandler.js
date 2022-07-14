@@ -13,7 +13,7 @@ const post = async (req, res) => {
     const suggestion = await Suggest.findByPk(req.query.id)
     if(suggestion && req.body.mode == 'accept'){
         axios.post("http://localhost:3000/sendMsg", {
-            test : "test"
+            id : suggestion.disId
         }).then(res => {
             if(req.data.status == "sent"){
                 req.flash("success", "Message successfully sent")
