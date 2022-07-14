@@ -14,9 +14,13 @@
 
         <% suggestions.forEach(suggest => { %>
 
-            <li class="suggest">
-                <p><%= suggest.name %></p>
-                <p><%= suggest.text %></p>
+            <li>
+                <form class="suggest" action="/suggestions?id=<%=suggest.id%>" method="post">
+                    <p><%= suggest.name %></p>
+                    <button class="btn btn-success" name="mode" value="accept">Accept</button>
+                    <button class="btn btn-danger" name="mode" value="declined">Declined</button>
+                    <p><%= suggest.text %></p>
+                </form>
             </li>
 
         <% }) %>

@@ -14,6 +14,10 @@ const Suggest = db.define("suggestions", {
 
     name : {
         type : DataTypes.TEXT
+    },
+
+    disId : {
+        type : DataTypes.TEXT
     }
 }, {
     timestamps : false
