@@ -16,7 +16,7 @@
     border-radius: 5px;
     color: rgb(96, 96, 96);
     word-break: break-all;
-    overflow: scroll;
+    overflow-y: scroll;
     height: 65px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
     font-size: 13px;
