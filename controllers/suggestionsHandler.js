@@ -25,7 +25,7 @@ const post = async (req, res) => {
 
             }else{
 
-                await suggestion.destroy()
+                await suggestion.update({ isAccepted : "no" })
 
                 req.flash("danger", "Can't send message to this user")
                 res.redirect("/suggestions")
