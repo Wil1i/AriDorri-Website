@@ -15,8 +15,11 @@ const post = async (req, res) => {
     console.log(`The suggestion is`, suggestion)
     if(suggestion && req.body.mode == 'accept'){
         console.log("Mode is accept. Sending...")
-        await axios.post(`http://localhost:3000/sendMsg?id=${suggestion.disId}`, {test : 1}).then(result => {
+        await axios.post(`http://localhost:3000/sendMsg?id=${suggestion.disId}`, {test : 1}).then(async result => {
             if(result.data['status'] == "sent"){
+                await suggestion.update({
+                    isAccepted : "yes"
+                })
                 req.flash("success", "Message successfully sent")
                 res.redirect("/suggestions")
             }else{

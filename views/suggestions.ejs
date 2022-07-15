@@ -17,8 +17,8 @@
             <li>
                 <form class="suggest" action="/suggestions?id=<%=suggest.id%>" method="post">
                     <p><%= suggest.name %></p>
-                    <button class="btn btn-success" name="mode" value="accept">Accept</button>
-                    <button class="btn btn-danger" name="mode" value="declined">Declined</button>
+                    <button class="btn btn-success <%= (suggest.isAccepted == "yes") ? "btn-disabled" : "" %>" name="mode" value="accept" <%= (suggest.isAccepted == "yes") ? "disabled" : "" %>>Accept</button>
+                    <button class="btn btn-danger" name="mode" value="declined"><%= (suggest.isAccepted) ? "Delete" : "Decline" %></button>
                     <p><%= suggest.text %></p>
                 </form>
             </li>

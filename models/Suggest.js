@@ -18,6 +18,10 @@ const Suggest = db.define("suggestions", {
 
     disId : {
         type : DataTypes.TEXT
+    },
+
+    isAccepted:{
+        type : DataTypes.TEXT
     }
 }, {
     timestamps : false
