@@ -1,7 +1,8 @@
 {
     "app" : {
         "secret" : "SECRET",
-        "port" : 80
+        "port" : 80,
+        "botPort" : 3000
     },
 
     "errors" : {
@@ -22,8 +23,8 @@
     },
 
     "db" : {
-        "name" : "aridorri",
-        "username" : "root",
-        "password" : "root"
+        "name" : "DATABASE NAME",
+        "username" : "DATABASE USERNAME",
+        "password" : "DATABASE PASSWORD"
     }
 }
