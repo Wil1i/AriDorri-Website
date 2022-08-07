@@ -1,0 +1,66 @@
+header{
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.01);
+    height: 70px;
+    width: 100%;
+}
+
+body{
+    background-color: rgb(223, 223, 223);
+}
+
+header > div{
+    display: flex;
+    height: 100%;
+    width: 45%;
+    align-items: center;
+}
+
+.menu{
+    width: 50%;
+}
+
+.header-right{
+    float: right;
+    justify-content: right;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.header-left{
+    float: left;
+    margin-left: 10px;
+}
+
+.header-left > h1{
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu-subItem{
+    float: right;
+    margin-left: 10px;
+    line-height: 15px;
+}
+
+.menu-subItem:not(:first-child){
+    border-right: 1px solid rgb(232, 232, 232);
+    padding-right: 10px;
+}
+
+.header-left > h1:hover{
+    color: rgb(0, 145, 255);
+    transform: rotateZ(3deg);
+}
+
+.menu-subItem > a{
+    transition: color 0.2s ease-in-out;
+    color: rgb(67, 67, 67);
+}
+
+.menu-subItem > a:hover{
+    color: rgb(0, 145, 255);
+}
