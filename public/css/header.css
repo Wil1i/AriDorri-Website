@@ -3,7 +3,6 @@ header {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.01);
   height: 70px;
   width: 100%;
-  position: fixed;
 }
 
 body {
@@ -31,6 +30,17 @@ header > div {
 .header-left {
   float: left;
   margin-left: 10px;
+}
+
+.header-login {
+  border-right: 1px solid gray;
+  margin-right: 5px;
+  margin-left: 10px;
+  padding-right: 5px;
+}
+
+.header-left > div > a {
+  font-size: 14px;
 }
 
 .header-left > h1 {

@@ -1,13 +1,22 @@
-<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/header.css" />
 
 <header>
-    <div class="header-left">
-        <h1>AriDorri</h1>
+  <div class="header-left">
+    <h1>AriDorri</h1>
+
+    <div>
+      <% if(!user){ %>
+      <a href="/login" class="header-login">Login</a>
+      <a href="/register">Register</a>
+      <% }else{ %>
+      <a href="/dashboard">Dashboard</a>
+      <% } %>
     </div>
-    <div class="header-right">
-        <ul class="menu">
-            <li class="menu-subItem"><a href="/about-us">About us</a></li>
-            <li class="menu-subItem"><a href="/twitch">Live Stream</a></li>
-        </ul>
-    </div>
+  </div>
+  <div class="header-right">
+    <ul class="menu">
+      <li class="menu-subItem"><a href="/about-us">About us</a></li>
+      <li class="menu-subItem"><a href="/twitch">Live Stream</a></li>
+    </ul>
+  </div>
 </header>
