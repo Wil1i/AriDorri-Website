@@ -26,6 +26,10 @@ const User = db.define(
     warn: {
       type: DataTypes.TEXT,
     },
+
+    password: {
+      type: DataTypes.TEXT,
+    },
   },
   {
     timestamps: false,
