@@ -47,6 +47,4 @@ User.encryptPassword = async (password) => {
   return hash;
 };
 
-module.exports = {
-  User,
-};
+module.exports = User;
