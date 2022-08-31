@@ -32,15 +32,14 @@ header > div {
   margin-left: 10px;
 }
 
-.header-login {
-  border-right: 1px solid gray;
-  margin-right: 5px;
-  margin-left: 10px;
+.header-left > div > a {
+  font-size: 14px;
+  margin-left: 5px;
   padding-right: 5px;
 }
 
-.header-left > div > a {
-  font-size: 14px;
+.header-left > div > a:not(:last-child) {
+  border-right: 1px solid gray;
 }
 
 .header-left > h1 {
