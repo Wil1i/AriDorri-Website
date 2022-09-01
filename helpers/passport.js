@@ -8,7 +8,7 @@ passport.use(
   new localStrategy(async function (username, password, done) {
     const user = await User.findOne({
       where: {
-        username: username,
+        username: username.toLowerCase(),
       },
     });
 

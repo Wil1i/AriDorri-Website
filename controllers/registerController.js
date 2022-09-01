@@ -12,7 +12,7 @@ const post = async (req, res) => {
   const isUserExist =
     (await User.findOne({
       where: {
-        username: req.body.username,
+        username: req.body.username.toLowerCase(),
       },
     })) || false;
 
@@ -21,7 +21,7 @@ const post = async (req, res) => {
     res.redirect("/register");
   } else {
     await User.create({
-      username: req.body.username,
+      username: req.body.username.toLowerCase(),
       password: await User.encryptPassword(req.body.password),
       number: req.body.number,
       userRank: "user",
