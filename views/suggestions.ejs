@@ -12,6 +12,12 @@
 <body>
     <ul id="suggestions-ul">
 
+        <% for(const key in flash){ %>
+            <span role="alert" class="flash">
+                <%= flash[key] %>
+            </span>
+        <% } %>
+
         <% suggestions.forEach(suggest => { %>
 
             <li>

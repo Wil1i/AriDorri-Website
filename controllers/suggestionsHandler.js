@@ -6,6 +6,7 @@ const get = async (req, res) => {
 
   res.render("suggestions", {
     suggestions,
+    flash: req.flash(),
   });
 };
 
