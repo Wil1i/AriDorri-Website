@@ -80,3 +80,12 @@ input:focus {
   background-color: rgba(0, 255, 0, 0.164);
   color: rgb(0, 82, 0);
 }
+
+.flash {
+  position: fixed;
+  min-width: 200px;
+  min-height: 70px;
+  background-color: rgba(0, 145, 255, 0.03);
+  border: 1px solid rgb(0, 145, 255);
+  border-radius: 15px;
+}
