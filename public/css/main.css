@@ -88,4 +88,7 @@ input:focus {
   background-color: rgba(0, 145, 255, 0.03);
   border: 1px solid rgb(0, 145, 255);
   border-radius: 15px;
+  top: 10px;
+  right: 10px;
+  direction: rtl;
 }
