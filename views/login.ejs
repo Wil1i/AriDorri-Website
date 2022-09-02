@@ -14,7 +14,7 @@
   <body>
     <%- include("./templates/header.ejs") %> <% for(const key in flash){ %>
 
-    <span role="alert" class="flash"> <%= flash[key] %> </span>
+    <span role="alert" class="flash flash-<%= key %>"> <%= flash[key] %> </span>
 
     <% } %>
 
