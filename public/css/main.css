@@ -21,10 +21,6 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-a:hover {
-  color: rgb(0, 145, 255);
-}
-
 button {
   cursor: pointer;
   padding: 5px 20px;
