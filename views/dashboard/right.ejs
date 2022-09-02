@@ -3,9 +3,23 @@
     <div class="right-main-info">
       <div class="user-info">
         <p id="username"><%= user.username %></p>
-        <p id="rank"><%= user.userRank %></p>
+        <p id="rank"><%= rankConverter(user.userRank) %></p>
       </div>
       <img src="/media/icons/profile-image.svg" alt="" id="profile-image" />
     </div>
+
+    <ul class="right-main-items">
+      <li class="right-main-item">
+        <a href="/dashboard/messages">پیام ها</a>
+      </li>
+
+      <li class="right-main-item">
+        <a href="/dashboard/strikes">هشدار ها</a>
+      </li>
+
+      <li class="right-main-item">
+        <a href="/dashboard/strikes">تنظیمات</a>
+      </li>
+    </ul>
   </div>
 </div>
