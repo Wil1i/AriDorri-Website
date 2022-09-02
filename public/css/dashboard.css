@@ -17,11 +17,14 @@
 }
 
 .right-main-info {
-  width: 97%;
-  margin-top: 10px;
+  width: 93%;
+  margin: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  border-bottom: 1px solid rgb(232, 232, 232);
 }
 
 #profile-image {
@@ -49,7 +52,7 @@
 
 .left-top > li {
   background-color: white;
-  float: left;
+  float: right;
   margin: 20px;
   padding: 7px;
   width: 300px;
@@ -76,7 +79,8 @@
 }
 
 .left-top-info {
-  margin-left: 10px;
+  margin-right: 10px;
+  text-align: right;
 }
 
 .left-top-info > p:last-child {
@@ -84,5 +88,22 @@
 }
 
 .left-top > li > div {
-  float: left;
+  float: right;
+}
+
+.right-main-items {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.right-main-item > a {
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: right;
+  display: block;
+}
+
+.right-main-item > a:hover {
+  background-color: rgb(246, 246, 246);
 }
