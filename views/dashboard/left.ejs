@@ -1,33 +1,7 @@
 <div class="left">
   <ul class="left-top">
-    <li>
-      <div class="left-top-image">
-        <img src="" alt="" />
-      </div>
-      <div class="left-top-info">
-        <p>امتیاز</p>
-        <p>0</p>
-      </div>
-    </li>
-
-    <li>
-      <div class="left-top-image">
-        <img src="" alt="" />
-      </div>
-      <div class="left-top-info">
-        <p>هشدار ها</p>
-        <p>0</p>
-      </div>
-    </li>
-
-    <li>
-      <div class="left-top-image">
-        <img src="" alt="" />
-      </div>
-      <div class="left-top-info">
-        <p>پیام ها</p>
-        <p>0</p>
-      </div>
-    </li>
+    <%- include("./leftTopItems.ejs", {key : "امتیاز", value : "0", color :"rgb(89, 216, 248)"}) %> 
+    <%- include("./leftTopItems.ejs", {key : "هشدار ها", value : "0", color : "rgb(245, 245, 99)"}) %> 
+    <%- include("./leftTopItems.ejs", {key : "پیام ها", value : "0", color : "rgb(236, 96, 96)"}) %>
   </ul>
 </div>

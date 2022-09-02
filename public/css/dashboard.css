@@ -59,18 +59,6 @@
   border-radius: 7px;
 }
 
-.left-top > li:first-child > .left-top-image {
-  background-color: rgb(89, 216, 248);
-}
-
-.left-top > li:last-child > .left-top-image {
-  background-color: rgb(245, 245, 99);
-}
-
-.left-top > li:not(:last-child):not(:first-child) > .left-top-image {
-  background-color: rgb(236, 96, 96);
-}
-
 .left-top-image {
   border-radius: 7px;
   width: 60px;
