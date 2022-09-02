@@ -2,14 +2,18 @@
 
 <header>
   <div class="header-left">
-    <h1>AriDorri</h1>
+    <a href="/">
+      <h1>AriDorri</h1>
+    </a>
 
     <div>
       <% if(!user){ %>
       <a href="/login" class="header-login">Login</a>
-      <a href="/register">Register</a>
+      <a href="/register" class="header-login" style="margin-left: 0"
+        >Register</a
+      >
       <% }else{ %>
-      <a href="/dashboard">Dashboard</a>
+      <a href="/dashboard" class="header-login">Dashboard</a>
       <% } %>
     </div>
   </div>

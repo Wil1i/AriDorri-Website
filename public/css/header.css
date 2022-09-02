@@ -32,10 +32,11 @@ header > div {
   margin-left: 10px;
 }
 
-.header-left > div > a {
+.header-login {
   font-size: 14px;
   margin-left: 15px;
   padding-right: 5px;
+  font-weight: lighter;
 }
 
 .header-left > div > a:not(:last-child) {
