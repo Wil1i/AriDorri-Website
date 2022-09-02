@@ -2,7 +2,7 @@ const convert = (rank) => {
   const convertedRanks = {
     user: "کاربر",
     editor: "ادیتور",
-    moderator: "ادمین",
+    moderator: "مدیر استریم",
     "super moderator": "مدیر",
     developer: "توسعه دهنده",
     owner: "مدیر کل",
