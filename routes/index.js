@@ -1,4 +1,4 @@
-const { isUserNotLoggedIn } = require("../helpers/auth");
+const { isUserNotLoggedIn, isUserLoggedIn } = require("../helpers/auth");
 const express = require("express");
 const Router = new express.Router();
 
@@ -16,6 +16,9 @@ Router.post("/login", loginController.post, loginController.loginSuccess);
 const registerController = require("../controllers/registerController");
 Router.get("/register", isUserNotLoggedIn, registerController.get);
 Router.post("/register", registerController.post);
+
+const dashboardController = require("../controllers/dashboardController.js");
+Router.get("/dashboard", isUserLoggedIn, dashboardController.get);
 
 Router.get("*", (req, res) => {
   res.render("error", { code: 404, msg: "Page not found" });

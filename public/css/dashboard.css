@@ -1,0 +1,88 @@
+.right {
+  width: 300px;
+  height: 90vh;
+  min-height: 600px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-main {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  height: 95%;
+  float: right;
+}
+
+.right-main-info {
+  width: 97%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#profile-image {
+  width: 60px;
+  float: right;
+}
+
+.right-main-info > div > p {
+  text-align: right;
+}
+
+#username {
+  font-size: 19px;
+}
+
+#rank {
+  color: gray;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.user-info {
+  margin-right: 10px;
+}
+
+.left-top > li {
+  background-color: white;
+  float: left;
+  margin: 20px;
+  padding: 7px;
+  width: 300px;
+  border-radius: 7px;
+}
+
+.left-top > li:first-child > .left-top-image {
+  background-color: rgb(89, 216, 248);
+}
+
+.left-top > li:last-child > .left-top-image {
+  background-color: rgb(245, 245, 99);
+}
+
+.left-top > li:not(:last-child):not(:first-child) > .left-top-image {
+  background-color: rgb(236, 96, 96);
+}
+
+.left-top-image {
+  border-radius: 7px;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.left-top-info {
+  margin-left: 10px;
+}
+
+.left-top-info > p:last-child {
+  color: rgb(100, 100, 100);
+}
+
+.left-top > li > div {
+  float: left;
+}
