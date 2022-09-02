@@ -2,6 +2,7 @@ const passport = require("passport");
 
 const get = (req, res) => {
   res.render("login", {
+    user : req.user,
     flash: req.flash(),
   });
 };

@@ -12,11 +12,7 @@
 <body>
     <ul id="suggestions-ul">
 
-        <% for(const key in flash){ %>
-            <span role="alert" class="flash">
-                <%= flash[key] %>
-            </span>
-        <% } %>
+        <%- include("./templates/flash.ejs") %>
 
         <% suggestions.forEach(suggest => { %>
 

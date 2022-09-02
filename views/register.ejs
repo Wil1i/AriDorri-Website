@@ -13,18 +13,36 @@
     <title>AriDorri login page</title>
   </head>
   <body>
+    <%- include("./templates/header.ejs") %> <% for(const key in flash){ %>
+
+    <span role="alert" class="flash"> <%= flash[key] %> </span>
+
+    <% } %>
+
     <div id="login-main">
       <form action="/register" method="post">
-        <div style="width: 100%">
-          <a href="/" style="float: left; width: 40%">Home</a>
-          <h1 style="float: left">Register</h1>
-        </div>
+        <h1 style="float: left">ثبت نام</h1>
         <div>
-          <input type="text" name="username" placeholder="Username" />
-          <input type="password" name="password" placeholder="Password" />
-          <input type="number" name="number" placeholder="Phone Number" />
+          <input
+            type="text"
+            name="username"
+            placeholder="نام کاربری"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="کلمه عبور"
+            required
+          />
+          <input
+            type="number"
+            name="number"
+            placeholder="شماره تماس"
+            required
+          />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">ثبت نام</button>
       </form>
     </div>
   </body>

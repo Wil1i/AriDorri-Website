@@ -8,7 +8,6 @@ const get = async (req, res) => {
 };
 
 const post = async (req, res) => {
-  // ! This function have a problem (findone)
   const isUserExist =
     (await User.findOne({
       where: {
@@ -20,17 +19,21 @@ const post = async (req, res) => {
     req.flash("danger", "با مشخصات وارد شده قادر به ساخت اکانت نیستید");
     res.redirect("/register");
   } else {
-    await User.create({
-      username: req.body.username.toLowerCase(),
-      password: await User.encryptPassword(req.body.password),
-      number: req.body.number,
-      userRank: "user",
-    });
+    if (req.body.number.length == 11) {
+      await User.create({
+        username: req.body.username.toLowerCase(),
+        password: await User.encryptPassword(req.body.password),
+        number: req.body.number,
+        userRank: "user",
+      });
 
-    req.flash(
-      "success",
-      "اکانت شما با موفقیت ساخته شد. شما میتوانید هم اکنون به اکانت خود وارد شوید."
-    );
+      req.flash(
+        "success",
+        "اکانت شما با موفقیت ساخته شد. شما میتوانید هم اکنون به اکانت خود وارد شوید."
+      );
+    } else {
+      req.flash("danger", "شماره تماس مورد تایید نمی‌باشد");
+    }
     res.redirect("/login");
   }
 };

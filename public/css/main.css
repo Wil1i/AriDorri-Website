@@ -44,6 +44,7 @@ input {
   border: 1px solid rgb(0, 145, 255);
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
+  text-align: right;
 }
 
 input:focus {
@@ -83,7 +84,7 @@ input:focus {
   border: 1px solid rgb(0, 145, 255);
   color: rgb(1, 68, 119);
   border-radius: 15px;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   direction: rtl;
   padding: 10px;

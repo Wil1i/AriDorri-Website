@@ -14,11 +14,15 @@ passport.use(
 
     try {
       if (!user) {
-        return done(null, false, { message: "Incorrect username or password" });
+        return done(null, false, {
+          message: "نام کاربری و یا کلمه عبور اشتباه است",
+        });
       }
 
       if (!User.validPassword(user, password)) {
-        return done(null, false, { message: "Incorrect username or password" });
+        return done(null, false, {
+          message: "نام کاربری و یا کلمه عبور اشتباه است",
+        });
       }
 
       return done(null, user);
