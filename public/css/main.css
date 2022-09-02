@@ -89,3 +89,19 @@ input:focus {
   direction: rtl;
   padding: 10px;
 }
+
+.flash-error {
+  background-color: rgb(249, 154, 154);
+  color: rgb(156, 6, 6);
+  border: 1px solid red;
+}
+
+.flash-danger {
+  background-color: rgb(249, 154, 154);
+  color: rgb(156, 6, 6);
+  border: 1px solid red;
+}
+
+.rtl {
+  direction: rtl;
+}
