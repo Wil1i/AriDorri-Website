@@ -83,6 +83,7 @@
 .right-main-items {
   margin-top: 15px;
   width: 100%;
+  height: 75%;
 }
 
 .right-main-item > a {
@@ -95,4 +96,22 @@
 
 .right-main-item > a:hover {
   background-color: rgb(246, 246, 246);
+}
+
+.logout {
+  width: 100%;
+}
+
+.logout > a {
+  color: rgb(243, 0, 0);
+  text-align: right;
+  width: 89%;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px 10px;
+  float: right;
+}
+
+.logout > a:hover {
+  background-color: rgb(255, 239, 239);
 }

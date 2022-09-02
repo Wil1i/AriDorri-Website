@@ -1,5 +1,5 @@
 header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.01);
   height: 70px;
   width: 100%;
@@ -38,7 +38,7 @@ header > div {
   font-weight: lighter;
 }
 
-.header-left > div:last-child{
+.header-left > div:last-child {
   margin-left: 10px;
 }
 
@@ -46,7 +46,7 @@ header > div {
   border-left: 1px solid gray;
 }
 
-.header-left > h1 {
+.header-left > a > h1 {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -65,7 +65,7 @@ header > div {
   padding-right: 10px;
 }
 
-.header-left > h1:hover {
+.header-left > a > h1:hover {
   color: rgb(0, 145, 255);
   transform: rotateZ(3deg);
 }
