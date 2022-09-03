@@ -3,6 +3,7 @@ const convert = (rank) => {
     user: "کاربر",
     editor: "ادیتور",
     moderator: "مدیر استریم",
+    "discord manager": "مدیر دیسکورد",
     "super moderator": "مدیر",
     developer: "توسعه دهنده",
     owner: "مدیر کل",

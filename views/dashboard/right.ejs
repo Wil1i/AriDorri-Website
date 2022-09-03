@@ -13,9 +13,18 @@
         <a href="/dashboard">داشبورد</a>
       </li>
 
+      <% if(user.userRank == "moderator" || user.userRank == "super moderator"
+      || user.userRank == "developer" || user.userRank == "owner"){ %>
+
       <li class="right-main-item">
         <a href="/moderators/dashboard">پنل مدیریت</a>
       </li>
+      <% } %> <% if(user.userRank == "super moderator" || user.userRank ==
+      "developer" || user.userRank == "owner"){ %>
+      <li class="right-main-item">
+        <a href="/dashboard/users">مدیریت کاربران</a>
+      </li>
+      <% } %>
 
       <li class="right-main-item">
         <a href="/dashboard/messages">پیام ها</a>

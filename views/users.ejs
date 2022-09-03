@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/users.css" />
+    <title>AriDorri - Dashboard</title>
+  </head>
+  <body>
+    <%- include("./templates/header.ejs") %>
+
+    <div class="body">
+      <%- include("./dashboard/right.ejs") %>
+
+      <ul class="left">
+        <% allUsers.forEach(u => { %>
+        <li class="user">
+          <img src="/media/icons/profile-image.png" alt="" />
+          <p><%= u.username %></p>
+          <p><%= u.userRank %></p>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>

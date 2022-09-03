@@ -23,6 +23,9 @@ Router.get("/dashboard", isUserLoggedIn, dashboardController.get);
 const logoutController = require("../controllers/logoutController");
 Router.get("/logout", logoutController.get);
 
+const usersController = require("../controllers/usersController");
+Router.get("/dashboard/users", isUserLoggedIn, usersController.get);
+
 Router.get("*", (req, res) => {
   res.render("error", { code: 404, msg: "Page not found" });
 });

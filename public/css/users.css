@@ -1,0 +1,15 @@
+.user {
+  background-color: white;
+  padding: 10px;
+  border-radius: 7px;
+  float: left;
+  width: 300px;
+  height: 100px;
+}
+
+.left {
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+  width: 1100px;
+}
