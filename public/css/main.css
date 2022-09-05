@@ -37,8 +37,11 @@ button:hover {
   color: rgb(0, 145, 255);
 }
 
+.btn-danger:hover {
+  color: rgb(212, 3, 3);
+}
+
 input {
-  width: 100%;
   margin: 10px 0;
   padding: 5px;
   border: 1px solid rgb(0, 145, 255);

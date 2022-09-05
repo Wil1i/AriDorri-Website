@@ -19,9 +19,44 @@
       <ul class="left">
         <% allUsers.forEach(u => { %>
         <li class="user">
-          <img src="/media/icons/profile-image.png" alt="" />
-          <p><%= u.username %></p>
-          <p><%= u.userRank %></p>
+          <div class="user-right">
+            <div>
+              <p><%= u.username %></p>
+              <p><%= rankConverter(u.userRank) %></p>
+            </div>
+            <img
+              src="/media/icons/profile-image.svg"
+              alt="Default Profile Image"
+            />
+          </div>
+
+          <div class="user-left">
+            <div class="user-left-top">
+              <button class="btn-danger">حذف کاربر</button>
+            </div>
+            <div class="user-left-bottom">
+              <button>تغییر مقام</button>
+              <select name="test" id="test">
+                <option value="user"><%= rankConverter("user") %></option>
+                <option value="moderator">
+                  <%= rankConverter("moderator") %>
+                </option>
+                <option value="discordManager">
+                  <%= rankConverter("discord manager") %>
+                </option>
+                <% if(user.userRank == "developer" || user.userRank == "owner"){
+                %>
+                <option value="super moderator">
+                  <%= rankConverter("super moderator") %>
+                </option>
+                <option value="owner"><%=rankConverter("owner")%></option>
+                <option value="developer">
+                  <%= rankConverter("developer") %>
+                </option>
+                <% } %>
+              </select>
+            </div>
+          </div>
         </li>
         <% }) %>
       </ul>
