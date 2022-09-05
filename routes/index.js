@@ -10,7 +10,12 @@ const homePageController = require("../controllers/homePageController");
 Router.get("/", homePageController.get);
 
 const suggestionsHandler = require("../controllers/suggestionsHandler");
-Router.get("/suggestions", isUserSuperMod, suggestionsHandler.get);
+Router.get(
+  "/suggestions",
+  isUserLoggedIn,
+  isUserSuperMod,
+  suggestionsHandler.get
+);
 Router.post("/suggestions", suggestionsHandler.post);
 
 const loginController = require("../controllers/loginController");
