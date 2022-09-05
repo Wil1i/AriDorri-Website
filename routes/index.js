@@ -1,4 +1,8 @@
-const { isUserNotLoggedIn, isUserLoggedIn } = require("../helpers/auth");
+const {
+  isUserNotLoggedIn,
+  isUserLoggedIn,
+  isUserSuperMod,
+} = require("../helpers/auth");
 const express = require("express");
 const Router = new express.Router();
 
