@@ -43,8 +43,25 @@ const isUserMod = async (req, res, next) => {
   }
 };
 
+const isUserSuperMod = async (req, res, next) => {
+  if (!req.user) {
+    return res.status(403).render("error", config.errors[403]);
+  }
+
+  if (
+    req.user.userRank == "developer" ||
+    req.user.userRank == "super moderator" ||
+    req.user.userRank == "owner"
+  ) {
+    next();
+  } else {
+    return res.status(403).render("error", config.errors[403]);
+  }
+};
+
 module.exports = {
   isUserLoggedIn,
   isUserNotLoggedIn,
   isUserMod,
+  isUserSuperMod,
 };
