@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const axios = require("axios");
 const rankConverter = require("../helpers/rankConverter");
 
 const get = async (req, res) => {
@@ -25,6 +26,19 @@ const post = async (req, res) => {
         return res.redirect("/dashboard/users");
       }
 
+      // Mod kicked controller start
+      if (
+        (findUser.userRank == "super moderator" ||
+          findUser.userRank == "moderator") &&
+        req.body.rank == "user" &&
+        findUser.disId
+      ) {
+        await axios.post(
+          `http://localhost:3000/modKicked?userId=${findUser.disId}`
+        );
+      }
+      // Mod kicked controller end
+
       findUser
         .update({
           userRank: req.body.rank,
@@ -33,6 +47,15 @@ const post = async (req, res) => {
           req.flash("success", "مقام کاربر با موفقیت آپدیت شد");
         });
     } else if (req.query.activity == "delete") {
+      if (
+        (findUser.userRank == "super moderator" ||
+          findUser.userRank == "moderator") &&
+        findUser.disId
+      ) {
+        await axios.post(
+          `http://localhost:3000/modKicked?userId=${findUser.disId}`
+        );
+      }
       await findUser.destroy().then(() => {
         req.flash("success", "کاربر مورد نظر با موفقیت حذف شد.");
       });
@@ -40,6 +63,7 @@ const post = async (req, res) => {
   } else {
     req.flash("danger", "کاربر مورد نظر یافت نشد");
   }
+
   res.redirect("/dashboard/users");
 };
 

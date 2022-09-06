@@ -15,15 +15,15 @@ const User = db.define(
       type: DataTypes.TEXT,
     },
 
-    discordUsername: {
-      type: DataTypes.TEXT,
-    },
-
     userRank: {
       type: DataTypes.TEXT,
     },
 
     warn: {
+      type: DataTypes.TEXT,
+    },
+
+    disId: {
       type: DataTypes.TEXT,
     },
 
