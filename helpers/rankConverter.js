@@ -9,7 +9,7 @@ const convert = (rank) => {
     owner: "مدیر کل",
   };
 
-  return convertedRanks[rank] ? convertedRanks[rank] : null;
+  return convertedRanks[rank] ? convertedRanks[rank] : "مقام نامعتبر";
 };
 
 module.exports = convert;
