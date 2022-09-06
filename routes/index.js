@@ -16,15 +16,25 @@ Router.get(
   isUserSuperMod,
   suggestionsHandler.get
 );
-Router.post("/suggestions", suggestionsHandler.post);
+Router.post(
+  "/suggestions",
+  isUserLoggedIn,
+  isUserSuperMod,
+  suggestionsHandler.post
+);
 
 const loginController = require("../controllers/loginController");
 Router.get("/login", isUserNotLoggedIn, loginController.get);
-Router.post("/login", loginController.post, loginController.loginSuccess);
+Router.post(
+  "/login",
+  isUserNotLoggedIn,
+  loginController.post,
+  loginController.loginSuccess
+);
 
 const registerController = require("../controllers/registerController");
 Router.get("/register", isUserNotLoggedIn, registerController.get);
-Router.post("/register", registerController.post);
+Router.post("/register", isUserNotLoggedIn, registerController.post);
 
 const dashboardController = require("../controllers/dashboardController.js");
 Router.get("/dashboard", isUserLoggedIn, dashboardController.get);
