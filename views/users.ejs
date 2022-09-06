@@ -11,7 +11,11 @@
     <title>AriDorri - Dashboard</title>
   </head>
   <body>
-    <%- include("./templates/header.ejs") %>
+    <%- include("./templates/header.ejs") %> <% for(const key in flash){ %>
+
+    <span role="alert" class="flash flash-<%= key %>"> <%= flash[key] %> </span>
+
+    <% } %>
 
     <div class="body">
       <%- include("./dashboard/right.ejs") %>
@@ -32,29 +36,39 @@
 
           <div class="user-left">
             <div class="user-left-top">
-              <button class="btn-danger">حذف کاربر</button>
+              <form
+                action="/dashboard/users?activity=delete&user=<%= u.id %>"
+                method="post"
+              >
+                <button class="btn-danger" type="submit">حذف کاربر</button>
+              </form>
             </div>
             <div class="user-left-bottom">
-              <button>تغییر مقام</button>
-              <select name="test" id="test">
-                <option value="user"><%= rankConverter("user") %></option>
-                <option value="moderator">
-                  <%= rankConverter("moderator") %>
-                </option>
-                <option value="discordManager">
-                  <%= rankConverter("discord manager") %>
-                </option>
-                <% if(user.userRank == "developer" || user.userRank == "owner"){
-                %>
-                <option value="super moderator">
-                  <%= rankConverter("super moderator") %>
-                </option>
-                <option value="owner"><%=rankConverter("owner")%></option>
-                <option value="developer">
-                  <%= rankConverter("developer") %>
-                </option>
-                <% } %>
-              </select>
+              <form
+                action="/dashboard/users?activity=rank&user=<%=u.id%>"
+                method="post"
+              >
+                <button type="submit">تغییر مقام</button>
+                <select name="rank" id="test">
+                  <option value="user"><%= rankConverter("user") %></option>
+                  <option value="moderator">
+                    <%= rankConverter("moderator") %>
+                  </option>
+                  <option value="discord manager">
+                    <%= rankConverter("discord manager") %>
+                  </option>
+                  <% if(user.userRank == "developer" || user.userRank ==
+                  "owner"){ %>
+                  <option value="super moderator">
+                    <%= rankConverter("super moderator") %>
+                  </option>
+                  <option value="owner"><%=rankConverter("owner")%></option>
+                  <option value="developer">
+                    <%= rankConverter("developer") %>
+                  </option>
+                  <% } %>
+                </select>
+              </form>
             </div>
           </div>
         </li>
