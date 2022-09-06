@@ -33,7 +33,18 @@ const logoutController = require("../controllers/logoutController");
 Router.get("/logout", logoutController.get);
 
 const usersController = require("../controllers/usersController");
-Router.get("/dashboard/users", isUserLoggedIn, usersController.get);
+Router.get(
+  "/dashboard/users",
+  isUserLoggedIn,
+  isUserSuperMod,
+  usersController.get
+);
+Router.post(
+  "/dashboard/users",
+  isUserLoggedIn,
+  isUserSuperMod,
+  usersController.post
+);
 
 Router.get("*", (req, res) => {
   res.render("error", { code: 404, msg: "Page not found" });
