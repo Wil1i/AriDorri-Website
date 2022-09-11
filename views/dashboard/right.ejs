@@ -13,14 +13,14 @@
         <a href="/dashboard">داشبورد</a>
       </li>
 
-      <% if(user.userRank == "moderator" || user.userRank == "super moderator"
-      || user.userRank == "developer" || user.userRank == "owner"){ %>
+      <% if(permission.isUserModerator(user)){ %>
 
       <li class="right-main-item">
-        <a href="/moderators/dashboard">پنل مدیریت</a>
+        <a href="/dashboard/submitban">ثبت بن</a>
       </li>
-      <% } %> <% if(user.userRank == "super moderator" || user.userRank ==
-      "developer" || user.userRank == "owner"){ %>
+
+      <% } %> <% if(permission.isUserSuperModerator(user)){ %>
+
       <li class="right-main-item">
         <a href="/dashboard/users">مدیریت کاربران</a>
       </li>
@@ -28,6 +28,7 @@
       <li class="right-main-item">
         <a href="/suggestions">پیشنهاد ها</a>
       </li>
+
       <% } %>
 
       <li class="right-main-item">

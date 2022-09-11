@@ -2,6 +2,7 @@ const {
   isUserNotLoggedIn,
   isUserLoggedIn,
   isUserSuperMod,
+  isUserMod,
 } = require("../helpers/auth");
 const express = require("express");
 const Router = new express.Router();
@@ -54,6 +55,20 @@ Router.post(
   isUserLoggedIn,
   isUserSuperMod,
   usersController.post
+);
+
+const applyBanController = require("../controllers/banApplyController");
+Router.get(
+  "/dashboard/submitban",
+  isUserLoggedIn,
+  isUserMod,
+  applyBanController.get
+);
+Router.post(
+  "/dashboard/submitban",
+  isUserLoggedIn,
+  isUserMod,
+  applyBanController.post
 );
 
 Router.get("*", (req, res) => {

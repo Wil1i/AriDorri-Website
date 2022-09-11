@@ -1,5 +1,7 @@
 const axios = require("axios");
 const Suggest = require("../models/Suggest");
+const rankConverter = require("../helpers/rankConverter");
+const permission = require("../helpers/userPermissions");
 
 const get = async (req, res) => {
   const suggestions = await Suggest.findAll();
@@ -8,6 +10,7 @@ const get = async (req, res) => {
     suggestions,
     flash: req.flash(),
     user: req.user,
+    permission,
   });
 };
 

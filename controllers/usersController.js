@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const axios = require("axios");
 const rankConverter = require("../helpers/rankConverter");
+const permission = require("../helpers/userPermissions");
 
 const get = async (req, res) => {
   const allUsers = await User.findAll();
@@ -9,6 +10,7 @@ const get = async (req, res) => {
     user: req.user,
     flash: req.flash(),
     rankConverter,
+    permission,
   });
 };
 
