@@ -1,0 +1,17 @@
+#submitban-form {
+  margin: 10px;
+}
+
+input {
+  float: right;
+  margin: 0;
+  margin-left: 10px;
+}
+
+textarea {
+  float: right;
+}
+
+button {
+  float: right;
+}

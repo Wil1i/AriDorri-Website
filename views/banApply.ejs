@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/submitban.css" />
+    <title>AriDorri - Dashboard</title>
+  </head>
+  <body>
+    <%- include("./templates/header.ejs") %>
+
+    <div class="body"><%- include("./dashboard/right.ejs") %></div>
+
+    <form action="/dashboard/submitban" method="post" id="submitban-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Twitch Username"
+        class="ltr"
+      />
+      <button type="submit" style="margin-left: 10px">ثبت</button>
+      <textarea
+        name="reason"
+        cols="70"
+        rows="7"
+        placeholder="توضیحات"
+        class="rtl"
+      ></textarea>
+    </form>
+  </body>
+</html>
