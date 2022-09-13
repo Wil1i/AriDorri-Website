@@ -16,13 +16,6 @@
     <div class="body"><%- include("./dashboard/right.ejs") %></div>
 
     <form action="/dashboard/submitban" method="post" id="submitban-form">
-      <input
-        type="text"
-        name="name"
-        placeholder="Twitch Username"
-        class="ltr"
-      />
-      <button type="submit" style="margin-left: 10px">ثبت</button>
       <textarea
         name="reason"
         cols="70"
@@ -30,6 +23,15 @@
         placeholder="توضیحات"
         class="rtl"
       ></textarea>
+
+      <input
+        type="text"
+        name="twitchName"
+        placeholder="Twitch Username"
+        class="ltr"
+      />
+
+      <button type="submit" style="margin-left: 10px">ثبت</button>
     </form>
   </body>
 </html>
