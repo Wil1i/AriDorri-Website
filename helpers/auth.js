@@ -32,7 +32,7 @@ const isUserMod = async (req, res, next) => {
 
   if (
     findUser &&
-    (findUser.userRank == "mod" ||
+    (findUser.userRank == "moderator" ||
       findUser.userRank == "super mod" ||
       findUser.userRank == "developer" ||
       findUser.userRank == "owner")
