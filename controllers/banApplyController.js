@@ -2,12 +2,15 @@ const rankConverter = require("../helpers/rankConverter");
 const twitchBans = require("../models/twitchBans");
 const permission = require("../helpers/userPermissions");
 
-const get = (req, res) => {
+const get = async (req, res) => {
+  const tBans = await twitchBans.findAll();
+
   res.render("banApply", {
     user: req.user,
     flash: req.flash(),
     permission,
     rankConverter,
+    tBans,
   });
 };
 

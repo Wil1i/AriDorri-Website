@@ -1,7 +1,3 @@
-#submitban-form {
-  margin: 10px;
-}
-
 input {
   float: right;
   margin: 0;
@@ -14,4 +10,74 @@ textarea {
 
 button {
   float: right;
+}
+
+.ban {
+  background-color: white;
+  display: inline-block;
+  float: right;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin: 20px;
+}
+
+.submitban-items {
+  padding-bottom: 50px;
+}
+
+.buiUsername::before {
+  content: "نام کاربری : ";
+  color: rgb(216, 216, 216);
+}
+
+.buiUsername {
+  color: white;
+}
+
+.buiExecutor::before {
+  content: "به دستور‌‌ : ";
+  color: rgb(216, 216, 216);
+}
+
+.buiExecutor {
+  color: white;
+}
+
+.buiReason::before {
+  content: "دلیل : ";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.buiReason {
+  float: right;
+}
+
+.bannedUserInformation > p {
+  float: right;
+  margin: 5px;
+}
+
+.bannedUserInformation {
+  background-color: rgb(0, 145, 255);
+  display: inline-block;
+  float: right;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.handler {
+  width: 100%;
+  min-height: 100px;
+}
+
+.bans {
+  display: flex;
+  flex-direction: column;
+}
+
+.reason {
+  width: 100%;
+  height: 200px;
 }

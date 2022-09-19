@@ -15,23 +15,42 @@
 
     <div class="body"><%- include("./dashboard/right.ejs") %></div>
 
-    <form action="/dashboard/submitban" method="post" id="submitban-form">
-      <textarea
-        name="reason"
-        cols="70"
-        rows="7"
-        placeholder="توضیحات"
-        class="rtl"
-      ></textarea>
+    <ul class="bans">
+      <li class="ban">
+        <form action="/dashboard/submitban" method="post" id="submitban-form">
+          <div class="submitban-items">
+            <input
+              type="text"
+              name="twitchName"
+              placeholder="Twitch Username"
+              class="ltr"
+            />
 
-      <input
-        type="text"
-        name="twitchName"
-        placeholder="Twitch Username"
-        class="ltr"
-      />
+            <button type="submit" style="margin-left: 10px">ثبت</button>
+          </div>
 
-      <button type="submit" style="margin-left: 10px">ثبت</button>
-    </form>
+          <textarea
+            name="reason"
+            placeholder="توضیحات"
+            class="rtl reason"
+            style="float: right"
+          ></textarea>
+        </form>
+      </li>
+
+      <% if(permission.isUserSuperModerator(user)){ %> <%
+      tBans.forEach(bannedUser => { %>
+      <li class="ban">
+        <div class="handler">
+          <div class="bannedUserInformation">
+            <p class="buiUsername rtl"><%= bannedUser.username %></p>
+            <p class="buiExecutor rtl"><%= bannedUser.executor %></p>
+          </div>
+        </div>
+
+        <pre class="buiReason rtl"><%= bannedUser.reason %></pre>
+      </li>
+      <% }) %> <% } %>
+    </ul>
   </body>
 </html>
